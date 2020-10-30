@@ -1,8 +1,8 @@
 <?php 
 $servername = "sql7.freemysqlhosting.net"; 
-$username = "sql7373516"; 
-$password = "ShsEsc4Kim"; 
-$dbname = "sql7373516";  
+$username = "sql7373522"; 
+$password = "hIFM36Iblk"; 
+$dbname = "sql7373522";  
 
 $conn= new mysqli($servername,$username,$password,$dbname);  
 $sql ="select * from pracownicy"; 
