@@ -14,7 +14,7 @@ $dbname = "sql7373522";
 
 $conn= new mysqli($servername,$username,$password,$dbname);  
 $sql ="select * from pracownicy"; 
-echo("<h3>zadanie1</h3>"); 
+echo("<h3>tabelka</h3>"); 
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
 echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>data_urodzenia</th></tr>"); 
@@ -22,6 +22,19 @@ while($row=mysqli_fetch_assoc($result)){
   echo("<tr>");     
   echo("<tr>");     
   echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td>");     
+  echo("<tr>"); 
+  echo("</tr>"); } 
+echo('</table>'); 
+    
+    $sql ="select avg(zarobki) from pracownicy where imie not like '%a' and having avg(zarobki)<35"; 
+echo("<h3>zadanie1</h3>"); 
+$result = mysqli_query($conn, $sql);  
+echo('<table border="1" class="tabela"'); 
+echo ("</th><th>imie</th><th>avg(zarobki)</th><th>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");     
+  echo("<tr>");     
+  echo("<td>".$row['imie']."</td><td>".$row['avg(zarobki)']."</td>");     
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
