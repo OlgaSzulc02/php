@@ -1,9 +1,9 @@
-  
 <html>
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
-</html>
+<body>
+
 <?php 
 $servername = "sql7.freemysqlhosting.net"; 
 $username = "sql7373522"; 
@@ -24,3 +24,5 @@ while($row=mysqli_fetch_assoc($result)){
   echo("</tr>"); } 
 echo('</table>'); 
 ?>
+  </body>
+</html>
