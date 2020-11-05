@@ -39,7 +39,7 @@ while($row=mysqli_fetch_assoc($result)){
   echo("</tr>"); } 
 echo('</table>'); 
   
-      $sql ="select avg(zarobki) from pracownicy,organizacja where id_org=dzial having avg(zarobki)<35"; 
+      $sql ="select avg(zarobki) from pracownicy group by dzial having avg(zarobki)<35"; 
 echo("<h3>zadanie2</h3>"); 
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
