@@ -42,6 +42,32 @@ while($row=mysqli_fetch_assoc($result)){
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
+    
+    $sql ="select imie,nazwa_dzial from pracownicy,organizacja where id_org=dzial and imie like '%a'"; 
+echo("<h3>Lista kobiet z nazwami działów</h3>"); 
+$result = mysqli_query($conn, $sql);  
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>imie</th><th>nazwa_dzial</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");     
+  echo("<tr>");     
+  echo("<td>".$row['imie']."</td><td>".$row['nazwa_dzial']."</td>");     
+  echo("<tr>"); 
+  echo("</tr>"); } 
+echo('</table>'); 
+    
+    $sql ="select imie,nazwa_dzial from pracownicy,organizacja where id_org=dzial and imie not like '%a'"; 
+echo("<h3>Lista mężczyzn z nazwami działów</h3>"); 
+$result = mysqli_query($conn, $sql);  
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>imie</th><th>nazwa_dzial</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");     
+  echo("<tr>");     
+  echo("<td>".$row['imie']."</td><td>".$row['nazwa_dzial']."</td>");     
+  echo("<tr>"); 
+  echo("</tr>"); } 
+echo('</table>'); 
 ?>
   </body>
 </html>
