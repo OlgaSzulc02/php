@@ -10,13 +10,12 @@
       <a href="pracownicy_organizacja.php">Pracownicy i organizacja</a>
       </div>
 
-
-<?php 
+<?php
 $servername = "sql7.freemysqlhosting.net"; 
-$username = "sql7373522"; 
-$password = "hIFM36Iblk"; 
-$dbname = "sql7373522";  
-
+$username = "sql7374844"; 
+$password = "6cxJ7qTmxi"; 
+$dbname = "sql7374844";  
+    
 $conn= new mysqli($servername,$username,$password,$dbname);  
 $sql ="select * from pracownicy"; 
 echo("<h3>tabelka pracowników</h3>"); 
