@@ -17,7 +17,7 @@ $password = "6cxJ7qTmxi";
 $dbname = "sql7374844";  
 
 $conn= new mysqli($servername,$username,$password,$dbname);  
-$sql ="select imie,nazwa_dzial from pracownicy,organizacja where id_org=dzial group by nazwa_dzial"; 
+$sql ="select imie,nazwa_dzial from pracownicy,organizacja where id_org=dzial"; 
 echo("<h3>Pracownicy z nazwą działu</h3>"); 
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
