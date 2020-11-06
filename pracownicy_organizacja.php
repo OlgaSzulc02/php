@@ -30,15 +30,15 @@ while($row=mysqli_fetch_assoc($result)){
   echo("</tr>"); } 
 echo('</table>'); 
   
-    $sql ="select * from organizacja"; 
-echo("<h3>tabelka organizacja</h3>"); 
+    $sql ="select imie from pracownicy where (dzial=1 or dzial=4)"; 
+echo("<h3>Pracownicy tylko z działu 1 i 4</h3>"); 
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
-echo ("<tr><th>id_org</th><th>nazwa_dzial</th></tr>"); 
+echo ("<tr><th>imie</th></tr>"); 
 while($row=mysqli_fetch_assoc($result)){ 
   echo("<tr>");     
   echo("<tr>");     
-  echo("<td>".$row['id_org']."</td><td>".$row['nazwa_dzial']."</td>");     
+  echo("<td>".$row['imie']."</td>");     
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
