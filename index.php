@@ -7,8 +7,8 @@
   <a href="https://github.com/AD-2018/sql-php-pierwsza_strona-OlgaSzulc02">github</a>
 
       <div class="nav">
-      <a href="pracownicy_organizacja.php">Pracownicy i organizacja</a>
-            <a href="funkcje_agregujace.php">Funkcje Agregujące</a>
+      <a href="pracownicy_organizacja.php">Pracownicy i organizacja</a> <br>
+      <a href="funkcje_agregujace.php">Funkcje Agregujące</a>
       </div>
 
 <?php
