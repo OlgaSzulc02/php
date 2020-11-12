@@ -19,6 +19,7 @@ $dbname = "sql7374844";
 $conn= new mysqli($servername,$username,$password,$dbname);  
 $sql ="select imie,nazwa_dzial from pracownicy,organizacja where id_org=dzial"; 
 echo("<h3>Pracownicy z nazwą działu</h3>"); 
+       echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
 echo ("<tr><th>imie</th><th>nazwa_dzial</th></tr>"); 
@@ -32,6 +33,7 @@ echo('</table>');
   
     $sql ="select imie from pracownicy where (dzial=1 or dzial=4)"; 
 echo("<h3>Pracownicy tylko z działu 1 i 4</h3>"); 
+       echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
 echo ("<tr><th>imie</th></tr>"); 
@@ -45,6 +47,7 @@ echo('</table>');
     
     $sql ="select imie,nazwa_dzial from pracownicy,organizacja where id_org=dzial and imie like '%a'"; 
 echo("<h3>Lista kobiet z nazwami działów</h3>"); 
+       echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
 echo ("<tr><th>imie</th><th>nazwa_dzial</th></tr>"); 
@@ -58,6 +61,7 @@ echo('</table>');
     
     $sql ="select imie,nazwa_dzial from pracownicy,organizacja where id_org=dzial and imie not like '%a'"; 
 echo("<h3>Lista mężczyzn z nazwami działów</h3>"); 
+       echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
 echo ("<tr><th>imie</th><th>nazwa_dzial</th></tr>"); 
