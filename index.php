@@ -8,6 +8,7 @@
 
       <div class="nav">
       <a href="pracownicy_organizacja.php">Pracownicy i organizacja</a>
+            <a href="funkcje_agregujace.php">Funkcje Agregujące</a>
       </div>
 
 <?php
