@@ -103,7 +103,7 @@ while($row=mysqli_fetch_assoc($result)){
   echo("</tr>"); } 
 echo('</table>'); 
     
-$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and imie like '%a' order by imie asc" 
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and imie like '%a' order by imie asc"; 
 echo("<h3>Kobiety posortowane rosnąco po imieniu</h3>"); 
        echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
@@ -117,7 +117,7 @@ while($row=mysqli_fetch_assoc($result)){
   echo("</tr>"); } 
 echo('</table>'); 
     
-$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and (imie like '%a') and (dzial=1 or dzial=3) order by zarobki asc";
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and imie like '%a' and (dzial=1 or dzial=3) order by zarobki asc";
 echo("<h3>Kobiety z działu 1 i 3 posortowane rosnąco po zarobkach</h3>"); 
        echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
@@ -162,7 +162,7 @@ while($row=mysqli_fetch_assoc($result)){
 echo('</table>'); 
                     
                     
-                $sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and (imie like '%a') and (dzial=4 or dzial=2) order by zarobki desc limit 3";   
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial and (imie like '%a') and (dzial=4 or dzial=2) order by zarobki desc limit 3";   
  echo("<h3>Trzy najlepiej zarabiające kobiety z działu 4 i 2</h3>"); 
        echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
@@ -176,7 +176,7 @@ while($row=mysqli_fetch_assoc($result)){
   echo("</tr>"); } 
 echo('</table>'); 
                     
-                $sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial order by data_urodzenia asc limit 1";   
+$sql = "SELECT * FROM pracownicy, organizacja where id_org=dzial order by data_urodzenia asc limit 1";   
 echo("<h3>Najstarszy pracownik</h3>"); 
        echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
