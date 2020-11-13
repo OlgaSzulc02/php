@@ -18,7 +18,7 @@ $dbname = "sql7374844";
 
 $conn= new mysqli($servername,$username,$password,$dbname);  
     
- $sql = "select imie, date_format(data_urodzenia, '%W-%M-%Y') as data from pracownicy";
+ $sql = "select imie, date_format(data_urodzenia, '%W-%m-%Y') as data from pracownicy";
 echo("<h3>Wyświetl nazwy dni w dacie urodzenia</h3>");
     echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
