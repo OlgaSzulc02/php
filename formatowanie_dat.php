@@ -62,6 +62,20 @@ while($row=mysqli_fetch_assoc($result)){
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
+    
+$sql = "SELECT curtime(4) as data"; 
+echo("<h3>Obecna, dokładna godzina (z dokładnością do milisekund)</h3>");
+    echo("<li>".$sql);    
+$result = mysqli_query($conn, $sql);
+echo('<table border="1">');
+echo('<th>Data</th>');
+while($row=mysqli_fetch_assoc($result)){
+    echo('<tr>');
+    echo('<td>'.$row['data'].'</td>');
+    echo('</tr>'); }
+ echo('</table>');
+    
+    
 ?>
   </body>
 </html>
