@@ -139,6 +139,20 @@ while($row=mysqli_fetch_assoc($result)){
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
+    
+ $sql = "select count(date_format(data_urodzenia, '%W')) as il from pracownicy where date_format(data_urodzenia, '%W')='Poniedzdiałek'";
+echo("<h3>Ilu pracowników urodziło się w poniedziałek</h3>");
+    echo("<li>".$sql);
+$result = mysqli_query($conn, $sql);  
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>ilosc</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");     
+  echo("<tr>");     
+  echo("<td>".$row['il']."</td>");     
+  echo("<tr>"); 
+  echo("</tr>"); } 
+echo('</table>'); 
 ?>
   </body>
 </html>
