@@ -89,16 +89,16 @@ while($row=mysqli_fetch_assoc($result)){
   echo("</tr>"); } 
 echo('</table>'); 
     
- $sql = "select date_format('2002-05-16', '%j') as urodzona";
+ $sql = "select date_format('2002-08-01','%j') as ur";
 echo("<h3>W którym dniu roku urodziłaś się</h3>");
     echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
-echo ("<tr><th>urodzona</th></tr>"); 
+echo ("<tr><th>data</th></tr>"); 
 while($row=mysqli_fetch_assoc($result)){ 
   echo("<tr>");     
   echo("<tr>");     
-  echo("<td>".$row['urodzona']."</td>");     
+  echo("<td>".$row['ur']."</td>");     
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
