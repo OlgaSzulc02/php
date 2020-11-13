@@ -50,7 +50,7 @@ while($row=mysqli_fetch_assoc($result)){
 echo('</table>'); 
       
  $sql = "select imie, date_format(data_urodzenia, '%w-%M-%Y') as data from pracownicy";
-echo("<h3>Wyświetl nazwy dni w dacie urodzenia</h3>");
+echo("<h3>Wyświetl nazwy miesięcy w dacie urodzenia</h3>");
     echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
