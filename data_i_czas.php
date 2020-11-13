@@ -58,21 +58,7 @@ while($row=mysqli_fetch_assoc($result)){
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
-              
-    $sql ="select sum(year(curdate())-year(data_urodzenia)) as suma_lat from pracownicy,organizacja where id_org=dzial and nazwa_dzial='handel'"; 
-echo("<h3>Suma lat pracowników z działu handel</h3>");
-    echo("<li>".$sql);
-$result = mysqli_query($conn, $sql);  
-echo('<table border="1" class="tabela"'); 
-echo ("<tr><th>suma_lat</th></tr>"); 
-while($row=mysqli_fetch_assoc($result)){ 
-  echo("<tr>");     
-  echo("<tr>");     
-  echo("<td>".$row['suma_lat']."</td>");     
-  echo("<tr>"); 
-  echo("</tr>"); } 
-echo('</table>'); 
-    
+
 
 ?>
   </body>
