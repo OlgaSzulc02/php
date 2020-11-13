@@ -75,8 +75,8 @@ while($row=mysqli_fetch_assoc($result)){
     echo('</tr>'); }
  echo('</table>');
     
- $sql = "select imie, date_format(data_urodzenia, '%y-%M-%W') as data from pracownicy";
-echo("<h3>Wyświetl nazwy dni w dacie urodzenia</h3>");
+ $sql = "select imie, date_format(data_urodzenia, '%Y-%M-%W') as data from pracownicy";
+echo("<h3>Wyświetl datę urodzenia w formie: ROK-MIESIĄC-DZIEŃ</h3>");
     echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
@@ -88,7 +88,20 @@ while($row=mysqli_fetch_assoc($result)){
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
-      
+    
+ $sql = "select date_format("2002-05-16", "%j") as urodzona";
+echo("<h3>W którym dniu roku urodziłaś się</h3>");
+    echo("<li>".$sql);
+$result = mysqli_query($conn, $sql);  
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>urodzona</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");     
+  echo("<tr>");     
+  echo("<td>".$row['urodzona']."</td>");     
+  echo("<tr>"); 
+  echo("</tr>"); } 
+echo('</table>'); 
 ?>
   </body>
 </html>
