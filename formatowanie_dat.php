@@ -139,11 +139,13 @@ while($row=mysqli_fetch_assoc($result)){
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
-    
- $sql = "select count(date_format(data_urodzenia, '%W')) as il from pracownicy where date_format(data_urodzenia, '%W')='Poniedziałek'";
+   
+ $sql1 = "set lc_time_names = 'pl_PL'";
+ $sql2 = "select count(date_format(data_urodzenia, '%W')) as il from pracownicy where date_format(data_urodzenia, '%W')='Poniedziałek'";
 echo("<h3>Ilu pracowników urodziło się w poniedziałek</h3>");
-    echo("<li>".$sql);
-$result = mysqli_query($conn, $sql);  
+    echo("<li>".$sql2);
+$result = mysqli_query($conn, $sql1);  
+$result = mysqli_query($conn, $sql2);  
 echo('<table border="1" class="tabela"'); 
 echo ("<tr><th>ilosc</th></tr>"); 
 while($row=mysqli_fetch_assoc($result)){ 
@@ -153,8 +155,9 @@ while($row=mysqli_fetch_assoc($result)){
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
-    
-    $sql = "select data_format(data_urodzenia,'%W') as dzien, count(date_format(data_urodzenia, '%W')) as liczba from pracownicy group by dzien order by 
+
+     $sql1 = "set lc_time_names = 'pl_PL'";
+    $sql2 = "select data_format(data_urodzenia,'%W') as dzien, count(date_format(data_urodzenia, '%W')) as liczba from pracownicy group by dzien order by 
 CASE
   WHEN dzien = 'Poniedziałek' THEN 1
   WHEN dzien = 'Wtorek' THEN 2
@@ -165,8 +168,9 @@ CASE
   WHEN dzien = 'Niedziela' THEN 7
 END ASC";
     echo("<h3>Ilu pracowników urodziło się w poszczególne dni tygodnia (wpisz w pierwszej kolumnie nazwę dnia tygodnia a w drugiej ile osób się wtedy urodziło). Dni powinny być posortowane od Poniedziałku do Niedzieli </h3>");
-    echo("<li>".$sql);
-$result = mysqli_query($conn, $sql);  
+    echo("<li>".$sql2);
+$result = mysqli_query($conn, $sql1);  
+$result = mysqli_query($conn, $sql2); 
 echo('<table border="1" class="tabela"'); 
 echo ("<tr><th>dzien</th><th>liczba</th></tr>"); 
 while($row=mysqli_fetch_assoc($result)){ 
