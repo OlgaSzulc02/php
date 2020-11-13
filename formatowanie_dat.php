@@ -89,6 +89,20 @@ while($row=mysqli_fetch_assoc($result)){
   echo("</tr>"); } 
 echo('</table>'); 
     
+     $sql = "select datediff(curdate(),'2002-08-01') as dni,datediff(curdate(),'2002-08-01')*24 as godz,datediff(curdate(),'2002-08-01')*24*60 as min";
+echo("<h3>Ile godzin, minut już żyjesz</h3>");
+    echo("<li>".$sql);
+$result = mysqli_query($conn, $sql);  
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>dni</th><th>godziny</th><th>minuty</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");     
+  echo("<tr>");     
+  echo("<td>".$row['dni']."</td><td>".$row['godz']."</td><td>".$row['min']."</td>");     
+  echo("<tr>"); 
+  echo("</tr>"); } 
+echo('</table>'); 
+    
  $sql = "select date_format('2002-08-01','%j') as ur";
 echo("<h3>W którym dniu roku urodziłaś się</h3>");
     echo("<li>".$sql);
