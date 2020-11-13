@@ -157,7 +157,7 @@ while($row=mysqli_fetch_assoc($result)){
   echo("</tr>"); } 
 echo('</table>'); 
                    
-        $sql ="select imię,nazwa_dzial,min(year(curdate())-year(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and (nazwa_dzial='handel' or nazwa_dzial='serwis') group by nazwa_dzial"; 
+        $sql ="select imie,nazwa_dzial,min(year(curdate())-year(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and (nazwa_dzial='handel' or nazwa_dzial='serwis') group by nazwa_dzial"; 
 echo("<h3>Najmłodsi pracownicy z imienia z działu: handel i serwis</h3>");
     echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
