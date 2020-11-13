@@ -31,6 +31,23 @@ while($row=mysqli_fetch_assoc($result)){
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
+    
+    $sql1 = "set lc_time_names = 'pl_PL'";
+    $sql2 = "select date_format(curdate(), '%W') as data";
+echo("<h3>Wypisz dzisiejszą nazwę dnia po polsku</h3>");
+    echo("<li>".$sql1);
+    echo("<li>".$sql2);
+$result = mysqli_query($conn, $sql1);  
+$result = mysqli_query($conn, $sql2);
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>data</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");     
+  echo("<tr>");     
+  echo("<td>".$row['data']."</td>");     
+  echo("<tr>"); 
+  echo("</tr>"); } 
+echo('</table>'); 
       
 
 ?>
