@@ -89,7 +89,7 @@ while($row=mysqli_fetch_assoc($result)){
   echo("</tr>"); } 
 echo('</table>'); 
         
-$sql ="select avg(zarobki) from pracownicy where (dzial=1 or dzial=2)'"; 
+$sql ="select avg(zarobki) from pracownicy where imie not like '%a' and (dzial=1 or dzial=2)'"; 
 echo("<h3>Średnia zarobków mężczyzn z działu 1 i 2  </h3>");
     echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
@@ -112,7 +112,7 @@ echo ("<tr><th>count(imie)</th></tr>");
 while($row=mysqli_fetch_assoc($result)){ 
   echo("<tr>");     
   echo("<tr>");     
-  echo("<td>".$row['count(imie))']."</td>");     
+  echo("<td>".$row['count(imie)']."</td>");     
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
