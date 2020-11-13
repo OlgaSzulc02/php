@@ -128,6 +128,20 @@ while($row=mysqli_fetch_assoc($result)){
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
+                
+        $sql ="select nazwa_dzial,max(year(curdate())-year(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial group by dzial"; 
+echo("<h3>Najstarsi pracownicy w każdym dziale</h3>");
+    echo("<li>".$sql);
+$result = mysqli_query($conn, $sql);  
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>nazwa_dzial</th><th>wiek</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");     
+  echo("<tr>");     
+  echo("<td>".$row['nazwa_dzial']."</td><td>".$row['wiek']."</td>");     
+  echo("<tr>"); 
+  echo("</tr>"); } 
+echo('</table>'); 
 ?>
   </body>
 </html>
