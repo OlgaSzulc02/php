@@ -21,4 +21,11 @@ th {
   height: 70px;
 } 
 
-tr:hover {background-color: white;}
+tr:hover {background-color: white;
+}
+
+a {
+  text-decoration: none;
+  background-color: blue;
+  padding: 1rem;
+}
