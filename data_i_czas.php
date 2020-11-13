@@ -156,6 +156,48 @@ while($row=mysqli_fetch_assoc($result)){
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
+                   
+        $sql ="select imię,nazwa_dzial,min(year(curdate())-year(data_urodzenia)) as wiek from pracownicy,organizacja where id_org=dzial and (nazwa_dzial='handel' or nazwa_dzial='serwis') group by nazwa_dzial"; 
+echo("<h3>Najmłodsi pracownicy z imienia z działu: handel i serwis</h3>");
+    echo("<li>".$sql);
+$result = mysqli_query($conn, $sql);  
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>imie</th><th>nazwa_dzial</th><th>wiek</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");     
+  echo("<tr>");     
+  echo("<td>".$row['imie']."</td><td>".$row['nazwa_dzial']."</td><td>".$row['wiek']."</td>");     
+  echo("<tr>"); 
+  echo("</tr>"); } 
+echo('</table>'); 
+               
+        $sql ="select imie,datediff(curdate(),data_urodzenia) as dni from pracownicy"; 
+echo("<h3>Długość życia pracowników w dniach </h3>");
+    echo("<li>".$sql);
+$result = mysqli_query($conn, $sql);  
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>imie</th><th>dni</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");     
+  echo("<tr>");     
+  echo("<td>".$row['imie']."</td><td>".$row['dni']."</td>");     
+  echo("<tr>"); 
+  echo("</tr>"); } 
+echo('</table>'); 
+                   
+        $sql ="select imie from pracownicy where imie not like '%a' order by data_urodzenia asc limit 1"; 
+echo("<h3>Najstarszy mężczyzna</h3>");
+    echo("<li>".$sql);
+$result = mysqli_query($conn, $sql);  
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>imie</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");     
+  echo("<tr>");     
+  echo("<td>".$row['imie']."</td>");     
+  echo("<tr>"); 
+  echo("</tr>"); } 
+echo('</table>');  
 ?>
   </body>
 </html>
