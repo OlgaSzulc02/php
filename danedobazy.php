@@ -1,7 +1,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="style.css">
-  <meta charset="utf-8">
+
   <meta name="viewport" content="width=device-width">
   <title>Dodawanie i Usuwanie</title>
 </head>
