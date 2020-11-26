@@ -1,6 +1,6 @@
 <?php
 echo("Delete<br>");
-echo ['id'];
+echo $_POST['id'];
 
 
 $servername = "sql7.freemysqlhosting.net"; 
