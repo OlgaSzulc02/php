@@ -11,21 +11,21 @@
   </div>
 <h3>dodawanie pracownika</h3>
 <form action="insert.php" method="POST">
-			<label>Id:</label><c><input type="text" name="id_pracownicy"><br>
+			<label>Id:</label><input type="text" name="id_pracownicy"><br>
 				
-			<label>Imie:</label><c><input type="text" name="imie"><br>
+			<label>Imie:</label><input type="text" name="imie"><br>
 	
-			<label>Dzial:</label><c><input type="text" name="dzial"></br>
+			<label>Dzial:</label><input type="text" name="dzial"></br>
 				
-			<label>Zarobki:</label><c><input type="text" name="zarobki"></br>
+			<label>Zarobki:</label><input type="text" name="zarobki"></br>
 	
-			<label>Data urodzenia:</label><c><input type="date" name="data_urodzenia"></br>
+			<label>Data urodzenia:</label><input type="date" name="data_urodzenia"></br>
 				
 			<input type="submit" value="dodaj pracownika">
 </form>
 <h3>usuwanie pracownika</h3>
 <form action="delete.php" method="POST">
-	<label>Podaj id:</label><c><input type="number" name="id_pracownicy"</br>
+	<label>Podaj id:</label><input type="number" name="id_pracownicy"</br>
    <input type="submit" value="usuń pracownika">
 </form>
 <?php
