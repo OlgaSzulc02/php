@@ -13,14 +13,19 @@
 <form action="insert.php" method="POST">
 			<label>Id:</label><input type="text" name="id_pracownicy" class="myInput" style="margin: 1rem;
 				/* padding: 1rem; */><br>
+				
 			<label>Imie:</label><input type="text" name="imie" class="myInput" style="margin: 1rem;
 				/* padding: 1rem; */><br>
+	
 			<label>Dzial:</label><input type="text" name="dzial" class="myInput" style="margin: 1rem;
 				/* padding: 1rem; */></br>
+				
 			<label>Zarobki:</label><input type="text" name="zarobki" class="myInput" style="margin: 1rem;
 				/* padding: 1rem; */></br>
+	
 			<label>Data urodzenia:</label><input type="text" name="data_urodzenia" class="myInput" style="margin: 1rem;
 				/* padding: 1rem; */></br>
+				
 			<input type="submit" value="dodaj pracownika">
 </form>
 <h3>usuwanie pracownika</h3>
