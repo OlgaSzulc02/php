@@ -2,9 +2,9 @@
 echo("Insert");
 
 $servername = "sql7.freemysqlhosting.net"; 
-$username = "sql7374844"; 
-$password = "6cxJ7qTmxi"; 
-$dbname = "sql7374844";    
+$username = "sql7378763"; 
+$password = "tKgKu1mp5I"; 
+$dbname = "sql7378763";    
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
