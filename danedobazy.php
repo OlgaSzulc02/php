@@ -11,7 +11,8 @@
   </div>
 <h3>dodawanie pracownika</h3>
 <form action="insert.php" method="POST">
-			<label>Id:</label><input type="text" name="id_pracownicy"><br>
+			<label>Id:</label><input type="text" name="id_pracownicy" class="myInput" style="margin: 1rem;
+				/* padding: 1rem; */><br>
 			<label>Imie:</label><input type="text" name="imie"><br>
 			<label>Dzial:</label><input type="text" name="dzial"></br>
 			<label>Zarobki:</label><input type="text" name="zarobki"></br>
