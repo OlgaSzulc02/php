@@ -11,12 +11,7 @@
   </div>
 
 <?php 
-$servername = "sql7.freemysqlhosting.net"; 
-$username = "sql7378763"; 
-$password = "tKgKu1mp5I"; 
-$dbname = "sql7378763";    
-
-$conn= new mysqli($servername,$username,$password,$dbname);  
+require_once("connect.php");
    echo("<h1>sum,avg,count</h1>"); 
     
 $sql ="select sum(zarobki) from pracownicy"; 
