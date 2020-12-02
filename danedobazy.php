@@ -29,12 +29,7 @@
    <input type="submit" value="usuń pracownika">
 </form>
 <?php
-$servername = "sql7.freemysqlhosting.net"; 
-$username = "sql7378763"; 
-$password = "tKgKu1mp5I"; 
-$dbname = "sql7378763";     
-
-$conn= new mysqli($servername,$username,$password,$dbname);  
+require_once("connect.php");
     echo("<h2>Podstawowe</h2>"); 
 $sql ="select * from pracownicy"; 
 echo("<h3>tabelka</h3>"); 
