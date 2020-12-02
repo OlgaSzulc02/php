@@ -4,15 +4,17 @@
 </head>
 <body>
 <?php
-require_once("connect.php");
-echo("Delete" . "<br>");
-echo $_POST['id'];
-echo "<br>";
+echo("Delete<br>");
+echo $_POST['id_pracownicy'];
 
-$sql = "DELETE FROM pracownicy WHERE id=".$_POST['id'];
+require_once("connect.php");
+
+$sql = "DELETE FROM pracownicy WHERE id=".$_POST['id_pracownicy'];
+
+echo $sql;
 
 if ($conn->query($sql) === TRUE) {
-  header('Location: https://olga-szulc.herokuapp.com/danedobazy.php');
+    header('Location: https://olga-szulc.herokuapp.com/danedobazy.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
