@@ -26,7 +26,7 @@
 <h3>usuwanie pracownika</h3>
 <form action="delete.php" method="POST">
 	<label>Podaj id:</label><input type="number" name="id_pracownicy"</br>
-   <input type="submit" value="id">
+   <input type="submit" value="usuń pracownika">
 </form>
 <?php
 require_once("connect.php");
