@@ -3,12 +3,7 @@ echo("Delete<br>");
 echo $_POST['id_pracownicy'];
 
 
-$servername = "sql7.freemysqlhosting.net"; 
-$username = "sql7378763"; 
-$password = "tKgKu1mp5I"; 
-$dbname = "sql7378763";      
-
-$conn = new mysqli($servername, $username, $password, $dbname);
+require_once("connect.php");
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
