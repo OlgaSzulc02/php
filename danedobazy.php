@@ -23,11 +23,7 @@
 				
 			<input type="submit" value="dodaj pracownika">
 </form>
-<h3>usuwanie pracownika</h3>
-<form action="delete.php" method="POST">
-	<label>Podaj id:</label><input type="number" name="id_pracownicy"</br>
-   <input type="submit" value="usuń pracownika">
-</form>
+
 <?php
 require_once("connect.php");
     echo("<h2>Podstawowe</h2>"); 
@@ -40,7 +36,10 @@ echo ("<tr><th>id_pracownicy</th><th>imie</th><th>dzial</th><th>zarobki</th><th>
 while($row=mysqli_fetch_assoc($result)){ 
   echo("<tr>");     
   echo("<tr>");     
-  echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td>");     
+  echo("<td>".$row['id_pracownicy']."</td><td>".$row['imie']."</td><td>".$row['dzial']."</td><td>".$row['zarobki']."</td><td>".$row['data_urodzenia']."</td><td>".<form action="delete.php" method="POST">
+	<label>Podaj id:</label><input type="number" name="id_pracownicy"</br>
+   <input type="submit" value="usuń pracownika">
+</form>."</td>");     
   echo("<tr>"); 
   echo("</tr>"); } 
 echo('</table>'); 
