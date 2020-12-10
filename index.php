@@ -15,7 +15,7 @@
       </div>
 <?php 
 require_once("connect.php");
-    echo("<select name="lista pracowników">");
+echo("<select name="lista pracowników">");
 	while($row = mysqli_fetch_assoc($result)) {
 echo("<option>.$row['id_pracownicy'].$row['imie'].$row['dzial'].$row['zarobki'].$row['data_urodzenia']");
 	};
