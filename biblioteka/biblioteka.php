@@ -10,8 +10,10 @@
     </div>
 <?php 
 	require_once("connect.php");
-$sql ="select * from biblTytul";
-$result = mysqli_query($conn, $sql);
+$sql1 ="select * from biblTytul";
+$result = mysqli_query($conn, $sql1);
+	$sql2 ="select * from biblAutor";
+$result = mysqli_query($conn, $sql2);
 if ( $result) {
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
