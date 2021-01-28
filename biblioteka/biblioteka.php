@@ -10,23 +10,21 @@
     </div>
 <?php 
 	require_once("connect.php");
-$sql1 ="select * from biblTytul";
-$result = mysqli_query($conn, $sql1);
-	$sql2 ="select * from biblAutor";
-$result = mysqli_query($conn, $sql2);
+$sql = "select (biblAutor_biblTytul.id) as ID_TAB, autor, tytul, biblWypoz from biblAutor_biblTytul,biblAutor,biblTytul where biblAutor.id=biblAutor_id and biblTytul.id=biblTytul_id order by autor,ID_TAB asc";
+$result = mysqli_query($conn, $sql);
 if ( $result) {
     } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-    };
-echo ('<h3 class="klasa">Txt</h3>');
-echo ('<div>Autor i Książka: <select name="autor_ksiazka">');
+    }
+echo('<select name="ksiazka">');
     while($row = mysqli_fetch_assoc($result)) {
-            echo ('<option value="'.$row['id'].'">');
-        echo ($row['autor']." ,".$row['tytul']);
-         echo ("</option>");
-	};
+            echo '<option value="'.$row['id'].'">';
+        echo($row['autor'].', '.$row['tytul']);
+         echo "</option>";
+    };
 echo('</select>');
 echo ('<br>');
+	
 require_once("connect.php");
   echo("<h3>Tytuły</h3>"); 
 $sql = "select * from biblTytul";
