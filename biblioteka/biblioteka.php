@@ -22,7 +22,6 @@ echo ('<div>Autor i Książka: <select name="autor_ksiazka">');
             echo ('<option value="'.$row['id'].'">');
         echo ($row['autor']." ,".$row['tytul']);
          echo ("</option>");
-    };
 	};
 echo('</select>');
 echo ('<br>');
