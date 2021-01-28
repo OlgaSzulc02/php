@@ -11,7 +11,7 @@
 <?php 
 	require_once("connect.php");
     echo ('<h2>Biblioteka<h2>');
-	$sql ="select autor, tytul from biblAutor,biblTytul group by tytul";
+	$sql ="select autor, tytul from biblAutor,biblTytul group by (tytul or autor)";
 $result = mysqli_query($conn, $sql);
 if ( $result) {
     } else {
