@@ -16,6 +16,10 @@
         <a href="pracownicy/danedobazy.php">Dodawanie i usuwanie</a><br>
       </div>
 <?php 
+
+$hostname = $_SERVER['HTTP_HOST'];
+echo("<li> hostname: ".$hostname."</li>");
+
 require_once("connect.php");
 echo("<h3>Lista pracowników</h3>");
 $sql ="select * from pracownicy"; 
