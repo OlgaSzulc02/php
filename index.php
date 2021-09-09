@@ -11,6 +11,7 @@
       <a href="pracownicy/pracownicy_organizacja.php">Pracownicy i organizacja</a><br>
       <a href="pracownicy/funkcje_agregujace.php">Funkcje Agregujące</a><br>
         <a href="pracownicy/data_i_czas.php">Data i Czas</a><br>
+        <a href="tak/plik2.php">cwiczenia tabelek</a><br>
         <a href="inne/formularz.html">Formularz</a><br>
                 <a href="biblioteka/biblioteka.php">Biblioteka</a><br>
         <a href="pracownicy/danedobazy.php">Dodawanie i usuwanie</a><br>
