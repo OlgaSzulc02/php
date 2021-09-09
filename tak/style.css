@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.pudelko {
+    background-color: burlywood;
+    padding: 5px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-areas: 
+    "a b b"
+    "a c c"
+    "a c c";
+}
+
+.p1 {
+    background-color: aqua;
+    grid-area: a;
+}
+
+.p2 {
+    background-color: blue;
+    grid-area: b;
+}
+
+.p3 {
+    background-color: brown;
+    grid-area: c;
+}

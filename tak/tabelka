@@ -1,0 +1,45 @@
+<?php
+
+echo("<h2>Zadania</h2>"); 
+    
+    $sql ="select imie from pracownicy where (dzial=2)"; 
+echo("<h3>Pracownicy tylko z działu 2</h3>"); 
+    echo("<li>".$sql);
+$result = mysqli_query($conn, $sql);  
+echo('<table border="1" class="tabela"'); 
+echo ("<tr><th>imie</th></tr>"); 
+while($row=mysqli_fetch_assoc($result)){ 
+  echo("<tr>");     
+  echo("<tr>");     
+  echo("<td>".$row['imie']."</td>");     
+  echo("<tr>"); 
+  echo("</tr>"); } 
+echo('</table>'); 
+    
+
+            require_once("/connect.php");
+            $sql = "SELECT * FROM pracownicy";
+            
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                  }
+            
+                $result = mysqli_query($conn, $sql);
+                if ( $result) {
+                     echo "<br>";
+                 } else {
+                   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+                 }
+            
+                echo("<h2>Lekarze</h2>");
+            
+                echo("<table border='1'>");
+                echo("<th>ID</th><th>Lekarz</th>");
+                    while($row = mysqli_fetch_assoc($result)) {
+                        echo("<tr>");
+                        echo("<td>".$row['id']."</td><td>".$row['imiona']."</td>");
+                        echo("</tr>");
+                    };
+                echo("</table>");
+                echo ("<br>");
+                ?>
