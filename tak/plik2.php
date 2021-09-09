@@ -11,8 +11,8 @@
 
 echo("<h2>Zadania</h2>"); 
 require_once("connect.php");
-    $sql ="select imie from pracownicy where (dzial=2)"; 
-echo("<h3>Pracownicy tylko z działu 2</h3>"); 
+    $sql ="select * from pracownicy"; 
+echo("<h3>Pracownicy"); 
     echo("<li>".$sql);
 $result = mysqli_query($conn, $sql);  
 echo('<table border="1" class="tabela"'); 
