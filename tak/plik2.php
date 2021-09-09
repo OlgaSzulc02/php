@@ -22,7 +22,7 @@
 			<input type="submit" value="dodaj pracownika">
 </form>
 <form action="delete.php" method="POST">
-	<label>Podaj id:</label><input type="number" name="id_pracownicy"</br>
+	<label>Podaj id:</label><input type="number" name="id_pracownicy"></br>
    <input type="submit" value="usuń pracownika">
 </form>
             <?php
